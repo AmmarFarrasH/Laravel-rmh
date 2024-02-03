@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facedes\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class PetugasSeeder extends Seeder
@@ -17,10 +17,10 @@ class PetugasSeeder extends Seeder
         //
         DB::table('petugases')->insert([
             'id_petugas' => random_int(1, 20),
-            'nama_pengguna' => Str::random(35),
+            'nama_petugas' => Str::random(35),
             'username' => Str::random(25),
             'password' => substr(md5(Str::random(32)), 0, 32),
-            'telp' => random_int(1, 13),
+            'telp' => Str::random(13),
             'level' => 'admin',
         ]);
     }

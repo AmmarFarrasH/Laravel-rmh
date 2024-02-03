@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facedes\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class TanggapanSeeder extends Seeder
@@ -17,7 +17,7 @@ class TanggapanSeeder extends Seeder
         //
         $petugasID = DB::table('petugases')->insertGetId([
             'id_petugas' => 01,
-            'nama_pengguna' => 'Arif Salahuddin',
+            'nama_petugas' => 'Arif Salahuddin',
             'username' => 'arif',
             'password' => substr(md5(Str::random(32)), 0, 32),
             'telp' => '0895224365651',

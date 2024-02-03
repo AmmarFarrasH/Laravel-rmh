@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class pengaduanSeeder extends Seeder
+class PengaduanSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,11 @@ class pengaduanSeeder extends Seeder
     public function run(): void
     {
         //
-        $nik = DB::table('masyarakat')->insertGetId([
+        $nik = DB::table('masyarakats')->insertGetId([
             'nik' => '3218981747490001',
             'nama' => 'Arif Salahuddin',
-            'username' => 'arif',
-            'password' => substr(md5(Str::random(32)), 0, 32),
+            'username' => 'arifsl',
+            'password' => substr(md5('arifsl'), 0, 32),
             'telp' => '0895224365651',
         ]);
 

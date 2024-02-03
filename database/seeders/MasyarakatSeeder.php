@@ -20,7 +20,7 @@ class MasyarakatSeeder extends Seeder
             'nama' => Str::random(35),
             'username' => Str::random(25),
             'password' => substr(md5(Str::random(32)), 0, 32),
-            'telp' => random_int(1,13),
+            'telp' => Str::random(13),
         ]);
     }
 }
