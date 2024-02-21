@@ -3,22 +3,30 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
-                            <a class="nav-link" href="#!">
+                            @can('manage_admin')
+                            <a class="nav-link" href="/dashboard/admin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                Dashboard Admin
                             </a>
-                            <a class="nav-link" href="login.html">
+                            <a class="nav-link" href="/kelas">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Login
+                                Kelas
                             </a>
-                            <a class="nav-link" href="register.html">
+                            <a class="nav-link" href="/petugas">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Register
+                                Petugas
                             </a>
-                            <a class="nav-link" href="password.html">
+                            @endcan
+                            @can('manage_petugas')
+                            <a class="nav-link" href="/dashboard/petugas">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Forgot Password
+                                Dashboard Petugas
                             </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Pembayaran
+                            </a>
+                            @endcan
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
